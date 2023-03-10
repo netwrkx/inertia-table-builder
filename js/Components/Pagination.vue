@@ -80,7 +80,10 @@
       v-if="hasData && hasLinks"
       class="hidden sm:flex-1 sm:flex sm:items-center sm:justify-between"
     >
-      <div dir="ltr" class="flex flex-row space-x-4 items-center flex-grow">
+      <div
+        dir="ltr"
+        class="flex flex-row space-x-4 items-center flex-grow"
+      >
         <PerPageSelector
           dusk="per-page-full"
           :value="perPage"
