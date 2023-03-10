@@ -91,7 +91,10 @@
           :on-change="onPerPageChange"
         />
 
-        <p dir="ltr" class="hidden lg:block text-sm text-gray-700 flex-grow">
+        <p
+          dir="ltr"
+          class="hidden lg:block text-sm text-gray-700 flex-grow"
+        >
           <span class="font-medium">{{ pagination.from }}</span>
           {{ translations.to }}
           <span class="font-medium">{{ pagination.to }}</span>
