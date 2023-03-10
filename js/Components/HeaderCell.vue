@@ -15,7 +15,7 @@
           <svg
             v-if="cell.sortable"
             aria-hidden="true"
-            class="w-3 h-3 ml-2"
+            class="w-3 h-3 ms-2"
             :class="{
               'text-gray-400': !cell.sorted,
               'text-green-500': cell.sorted,

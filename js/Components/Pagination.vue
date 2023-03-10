@@ -38,7 +38,7 @@
             d="M7 16l-4-4m0 0l4-4m-4 4h18"
           />
         </svg>
-        <span class="hidden sm:inline ml-2">{{ translations.previous }}</span>
+        <span class="hidden sm:inline ms-2">{{ translations.previous }}</span>
       </component>
       <PerPageSelector
         dusk="per-page-mobile"
@@ -54,10 +54,10 @@
         }"
         :href="nextPageUrl"
         :dusk="nextPageUrl ? 'pagination-simple-next' : null"
-        class="ml-3 relative inline-flex items-center px-4 py-2 border border-gray-300 text-sm font-medium rounded-md bg-white"
+        class="ms-3 relative inline-flex items-center px-4 py-2 border border-gray-300 text-sm font-medium rounded-md bg-white"
         @click.prevent="onClick(nextPageUrl)"
       >
-        <span class="hidden sm:inline mr-2">{{ translations.next }}</span>
+        <span class="hidden sm:inline me-2">{{ translations.next }}</span>
         <svg
           xmlns="http://www.w3.org/2000/svg"
           class="h-5 w-5 text-gray-400"

@@ -12,7 +12,7 @@
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          class="h-5 w-5 mr-2 text-gray-400"
+          class="h-5 w-5 me-2 text-gray-400"
 
           viewBox="0 0 20 20"
           fill="currentColor"
@@ -35,7 +35,7 @@
         @input="onChange(searchInput.key, $event.target.value)"
       >
       <div
-        class="absolute inset-y-0 right-0 pr-3 flex items-center"
+        class="absolute inset-y-0 end-0 pe-3 flex items-center"
       >
         <button
           class="rounded-md text-gray-400 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"

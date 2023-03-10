@@ -8,7 +8,7 @@
       :class="{'opacity-75': isVisiting}"
     >
       <div class="flex flex-row flex-wrap sm:flex-nowrap justify-start px-4 sm:px-0">
-        <div class="order-2 sm:order-1 mr-2 sm:mr-4">
+        <div class="order-2 sm:order-1 me-2 sm:me-4">
           <slot
             name="tableFilter"
             :has-filters="queryBuilderProps.hasFilters"
@@ -27,7 +27,7 @@
 
         <div
           v-if="queryBuilderProps.globalSearch"
-          class="flex flex-row w-full sm:w-auto sm:flex-grow order-1 sm:order-2 mb-2 sm:mb-0 sm:mr-4"
+          class="flex flex-row w-full sm:w-auto sm:flex-grow order-1 sm:order-2 mb-2 sm:mb-0 sm:me-4"
         >
           <slot
             name="tableGlobalSearch"
@@ -54,7 +54,7 @@
         >
           <div
             v-if="canBeReset"
-            class="order-5 sm:order-3 sm:mr-4 ml-auto"
+            class="order-5 sm:order-3 sm:me-4 ms-auto"
           >
             <TableReset :on-click="resetQuery" />
           </div>
@@ -69,7 +69,7 @@
         >
           <TableAddSearchRow
             v-if="queryBuilderProps.hasSearchInputs"
-            class="order-3 sm:order-4 mr-2 sm:mr-4"
+            class="order-3 sm:order-4 me-2 sm:me-4"
             :search-inputs="queryBuilderProps.searchInputsWithoutGlobal"
             :has-search-inputs-without-value="queryBuilderProps.hasSearchInputsWithoutValue"
             :on-add="showSearchInput"
@@ -85,7 +85,7 @@
         >
           <TableColumns
             v-if="queryBuilderProps.hasToggleableColumns"
-            class="order-4 mr-4 sm:mr-0 sm:order-5"
+            class="order-4 me-4 sm:me-0 sm:order-5"
             :columns="queryBuilderProps.columns"
             :has-hidden-columns="queryBuilderProps.hasHiddenColumns"
             :on-change="changeColumnStatus"
@@ -123,7 +123,7 @@
                   :sort-by="sortBy"
                   :header="header"
                 >
-                  <tr class="font-medium text-xs uppercase text-left tracking-wider text-gray-500 py-3 px-6">
+                  <tr class="font-medium text-xs uppercase text-start tracking-wider text-gray-500 py-3 px-6">
                     <HeaderCell
                       v-for="column in queryBuilderProps.columns"
                       :key="`table-${name}-header-${column.key}`"
