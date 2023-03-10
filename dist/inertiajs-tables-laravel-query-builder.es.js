@@ -263,10 +263,7 @@ const Ae = ["dusk", "value"], He = ["value"], ie = {
 ], -1), Xe = {
   key: 2,
   class: "hidden sm:flex-1 sm:flex sm:items-center sm:justify-between"
-}, Ze = {
-  dir: "ltr",
-  class: "flex flex-row space-x-4 items-center flex-grow"
-}, et = {
+}, Ze = { class: "flex flex-row space-x-4 items-center flex-grow" }, et = {
   dir: "ltr",
   class: "hidden lg:block text-sm text-gray-700 flex-grow"
 }, tt = { class: "font-medium" }, rt = { class: "font-medium" }, nt = { class: "font-medium" }, st = { dir: "ltr" }, lt = {
