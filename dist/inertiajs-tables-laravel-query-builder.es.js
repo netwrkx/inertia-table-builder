@@ -266,7 +266,10 @@ const Ae = ["dusk", "value"], He = ["value"], ie = {
 }, Ze = {
   dir: "ltr",
   class: "flex flex-row space-x-4 items-center flex-grow"
-}, et = { class: "hidden lg:block text-sm text-gray-700 flex-grow" }, tt = { class: "font-medium" }, rt = { class: "font-medium" }, nt = { class: "font-medium" }, st = { dir: "ltr" }, lt = {
+}, et = {
+  dir: "ltr",
+  class: "hidden lg:block text-sm text-gray-700 flex-grow"
+}, tt = { class: "font-medium" }, rt = { class: "font-medium" }, nt = { class: "font-medium" }, st = { dir: "ltr" }, lt = {
   class: "relative z-0 inline-flex rounded-md shadow-sm -space-x-px",
   "aria-label": "Pagination"
 }, at = { class: "sr-only" }, ot = /* @__PURE__ */ l("svg", {
