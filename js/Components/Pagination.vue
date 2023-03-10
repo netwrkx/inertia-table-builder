@@ -110,7 +110,7 @@
             }"
             :href="previousPageUrl"
             :dusk="previousPageUrl ? 'pagination-previous' : null"
-            class="relative inline-flex items-center px-2 py-2 rounded-l-md border border-gray-300 bg-white text-sm font-medium"
+            class="relative inline-flex items-center px-2 py-2 rounded-s-md border border-gray-300 bg-white text-sm font-medium"
             @click.prevent="onClick(previousPageUrl)"
           >
             <span class="sr-only">{{ translations.previous }}</span>
@@ -161,7 +161,7 @@
             }"
             :href="nextPageUrl"
             :dusk="nextPageUrl ? 'pagination-next' : null"
-            class="relative inline-flex items-center px-2 py-2 rounded-r-md border border-gray-300 bg-white text-sm font-medium"
+            class="relative inline-flex items-center px-2 py-2 rounded-e-md border border-gray-300 bg-white text-sm font-medium"
             @click.prevent="onClick(nextPageUrl)"
           >
             <span class="sr-only">{{ translations.next }}</span>

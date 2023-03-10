@@ -387,7 +387,7 @@ const Ae = ["dusk", "value"], He = ["value"], ie = {
               class: $([{
                 "cursor-not-allowed text-gray-400": !t(n),
                 "text-gray-500 hover:bg-gray-50": t(n)
-              }, "relative inline-flex items-center px-2 py-2 rounded-l-md border border-gray-300 bg-white text-sm font-medium"]),
+              }, "relative inline-flex items-center px-2 py-2 rounded-s-md border border-gray-300 bg-white text-sm font-medium"]),
               href: t(n),
               dusk: t(n) ? "pagination-previous" : null,
               onClick: q[2] || (q[2] = B((w) => e.onClick(t(n)), ["prevent"]))
@@ -422,7 +422,7 @@ const Ae = ["dusk", "value"], He = ["value"], ie = {
               class: $([{
                 "cursor-not-allowed text-gray-400": !t(f),
                 "text-gray-500 hover:bg-gray-50": t(f)
-              }, "relative inline-flex items-center px-2 py-2 rounded-r-md border border-gray-300 bg-white text-sm font-medium"]),
+              }, "relative inline-flex items-center px-2 py-2 rounded-e-md border border-gray-300 bg-white text-sm font-medium"]),
               href: t(f),
               dusk: t(f) ? "pagination-next" : null,
               onClick: q[3] || (q[3] = B((w) => e.onClick(t(f)), ["prevent"]))
@@ -763,7 +763,7 @@ const Ae = ["dusk", "value"], He = ["value"], ie = {
       l("div", Lt, [
         l("label", {
           for: f.key,
-          class: "inline-flex items-center px-4 rounded-l-md border border-r-0 border-gray-300 bg-gray-50 text-gray-500 text-sm"
+          class: "inline-flex items-center px-4 rounded-s-md border border-e-0 border-gray-300 bg-gray-50 text-gray-500 text-sm"
         }, [
           zt,
           l("span", null, p(f.label), 1)
@@ -776,7 +776,7 @@ const Ae = ["dusk", "value"], He = ["value"], ie = {
           name: f.key,
           value: f.value,
           type: "text",
-          class: "flex-1 min-w-0 block w-full px-3 py-2 rounded-none rounded-r-md focus:ring-indigo-500 focus:border-indigo-500 text-sm border-gray-300",
+          class: "flex-1 min-w-0 block w-full px-3 py-2 rounded-none rounded-e-md focus:ring-indigo-500 focus:border-indigo-500 text-sm border-gray-300",
           onInput: (F) => e.onChange(f.key, F.target.value)
         }, null, 40, Dt)),
         l("div", Rt, [

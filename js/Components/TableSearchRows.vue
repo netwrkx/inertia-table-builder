@@ -8,7 +8,7 @@
     <div class="flex rounded-md shadow-sm relative mt-3">
       <label
         :for="searchInput.key"
-        class="inline-flex items-center px-4 rounded-l-md border border-r-0 border-gray-300 bg-gray-50 text-gray-500 text-sm"
+        class="inline-flex items-center px-4 rounded-s-md border border-e-0 border-gray-300 bg-gray-50 text-gray-500 text-sm"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -31,7 +31,7 @@
         :name="searchInput.key"
         :value="searchInput.value"
         type="text"
-        class="flex-1 min-w-0 block w-full px-3 py-2 rounded-none rounded-r-md focus:ring-indigo-500 focus:border-indigo-500 text-sm border-gray-300"
+        class="flex-1 min-w-0 block w-full px-3 py-2 rounded-none rounded-e-md focus:ring-indigo-500 focus:border-indigo-500 text-sm border-gray-300"
         @input="onChange(searchInput.key, $event.target.value)"
       >
       <div
