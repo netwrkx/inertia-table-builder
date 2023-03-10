@@ -182,10 +182,10 @@ const je = {
 function ce() {
   return J.translations;
 }
-function qr(e, o) {
+function Br(e, o) {
   J.translations[e] = o;
 }
-function Br(e) {
+function Fr(e) {
   J.translations = e;
 }
 const Ae = ["dusk", "value"], He = ["value"], ie = {
@@ -263,10 +263,13 @@ const Ae = ["dusk", "value"], He = ["value"], ie = {
 ], -1), Xe = {
   key: 2,
   class: "hidden sm:flex-1 sm:flex sm:items-center sm:justify-between"
-}, Ze = { class: "flex flex-row space-x-4 items-center flex-grow" }, et = { class: "hidden lg:block text-sm text-gray-700 flex-grow" }, tt = { class: "font-medium" }, rt = { class: "font-medium" }, nt = { class: "font-medium" }, st = {
+}, Ze = {
+  dir: "ltr",
+  class: "flex flex-row space-x-4 items-center flex-grow"
+}, et = { class: "hidden lg:block text-sm text-gray-700 flex-grow" }, tt = { class: "font-medium" }, rt = { class: "font-medium" }, nt = { class: "font-medium" }, st = { dir: "ltr" }, lt = {
   class: "relative z-0 inline-flex rounded-md shadow-sm -space-x-px",
   "aria-label": "Pagination"
-}, lt = { class: "sr-only" }, at = /* @__PURE__ */ l("svg", {
+}, at = { class: "sr-only" }, ot = /* @__PURE__ */ l("svg", {
   xmlns: "http://www.w3.org/2000/svg",
   class: "h-5 w-5",
   viewBox: "0 0 20 20",
@@ -277,7 +280,7 @@ const Ae = ["dusk", "value"], He = ["value"], ie = {
     d: "M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z",
     "clip-rule": "evenodd"
   })
-], -1), ot = { class: "sr-only" }, ut = /* @__PURE__ */ l("svg", {
+], -1), ut = { class: "sr-only" }, it = /* @__PURE__ */ l("svg", {
   xmlns: "http://www.w3.org/2000/svg",
   class: "h-5 w-5",
   viewBox: "0 0 20 20",
@@ -288,7 +291,7 @@ const Ae = ["dusk", "value"], He = ["value"], ie = {
     d: "M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z",
     "clip-rule": "evenodd"
   })
-], -1), it = {
+], -1), ct = {
   __name: "Pagination",
   props: {
     onClick: {
@@ -381,20 +384,20 @@ const Ae = ["dusk", "value"], He = ["value"], ie = {
             M(" " + p(t(u).results), 1)
           ])
         ]),
-        l("div", null, [
-          l("nav", st, [
+        l("div", st, [
+          l("nav", lt, [
             (a(), x(I(t(n) ? "a" : "div"), {
               class: $([{
                 "cursor-not-allowed text-gray-400": !t(n),
                 "text-gray-500 hover:bg-gray-50": t(n)
-              }, "relative inline-flex items-center px-2 py-2 rounded-s-md border border-gray-300 bg-white text-sm font-medium"]),
+              }, "relative inline-flex items-center px-2 py-2 rounded-l-md border border-gray-300 bg-white text-sm font-medium"]),
               href: t(n),
               dusk: t(n) ? "pagination-previous" : null,
               onClick: q[2] || (q[2] = B((w) => e.onClick(t(n)), ["prevent"]))
             }, {
               default: C(() => [
-                l("span", lt, p(t(u).previous), 1),
-                at
+                l("span", at, p(t(u).previous), 1),
+                ot
               ]),
               _: 1
             }, 8, ["class", "href", "dusk"])),
@@ -422,14 +425,14 @@ const Ae = ["dusk", "value"], He = ["value"], ie = {
               class: $([{
                 "cursor-not-allowed text-gray-400": !t(f),
                 "text-gray-500 hover:bg-gray-50": t(f)
-              }, "relative inline-flex items-center px-2 py-2 rounded-e-md border border-gray-300 bg-white text-sm font-medium"]),
+              }, "relative inline-flex items-center px-2 py-2 rounded-r-md border border-gray-300 bg-white text-sm font-medium"]),
               href: t(f),
               dusk: t(f) ? "pagination-next" : null,
               onClick: q[3] || (q[3] = B((w) => e.onClick(t(f)), ["prevent"]))
             }, {
               default: C(() => [
-                l("span", ot, p(t(u).next), 1),
-                ut
+                l("span", ut, p(t(u).next), 1),
+                it
               ]),
               _: 1
             }, 8, ["class", "href", "dusk"]))
@@ -438,7 +441,7 @@ const Ae = ["dusk", "value"], He = ["value"], ie = {
       ])) : k("", !0)
     ])) : k("", !0);
   }
-}, ct = /* @__PURE__ */ l("svg", {
+}, dt = /* @__PURE__ */ l("svg", {
   xmlns: "http://www.w3.org/2000/svg",
   class: "h-5 w-5 text-gray-400",
   viewBox: "0 0 20 20",
@@ -449,12 +452,12 @@ const Ae = ["dusk", "value"], He = ["value"], ie = {
     d: "M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z",
     "clip-rule": "evenodd"
   })
-], -1), dt = {
+], -1), ht = {
   role: "menu",
   "aria-orientation": "horizontal",
   "aria-labelledby": "add-search-input-menu",
   class: "min-w-max"
-}, ht = ["dusk", "onClick"], ft = {
+}, ft = ["dusk", "onClick"], gt = {
   __name: "TableAddSearchRow",
   props: {
     searchInputs: {
@@ -483,35 +486,35 @@ const Ae = ["dusk", "value"], He = ["value"], ie = {
       class: "w-auto"
     }, {
       button: C(() => [
-        ct
+        dt
       ]),
       default: C(() => [
-        l("div", dt, [
+        l("div", ht, [
           (a(!0), h(P, null, O(e.searchInputs, (n, f) => (a(), h("button", {
             key: f,
             dusk: `add-search-row-${n.key}`,
             class: "text-start w-full px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900",
             role: "menuitem",
             onClick: B((m) => i(n.key), ["prevent"])
-          }, p(n.label), 9, ht))), 128))
+          }, p(n.label), 9, ft))), 128))
         ])
       ]),
       _: 1
     }, 8, ["disabled"]));
   }
-}, gt = /* @__PURE__ */ l("path", { d: "M10 12a2 2 0 100-4 2 2 0 000 4z" }, null, -1), pt = /* @__PURE__ */ l("path", {
+}, pt = /* @__PURE__ */ l("path", { d: "M10 12a2 2 0 100-4 2 2 0 000 4z" }, null, -1), vt = /* @__PURE__ */ l("path", {
   "fill-rule": "evenodd",
   d: "M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z",
   "clip-rule": "evenodd"
-}, null, -1), vt = [
-  gt,
-  pt
-], mt = {
+}, null, -1), mt = [
+  pt,
+  vt
+], bt = {
   role: "menu",
   "aria-orientation": "horizontal",
   "aria-labelledby": "toggle-columns-menu",
   class: "min-w-max"
-}, bt = { class: "px-2" }, yt = { class: "divide-y divide-gray-200" }, wt = { class: "text-sm text-gray-900" }, xt = ["aria-pressed", "aria-labelledby", "aria-describedby", "dusk", "onClick"], kt = /* @__PURE__ */ l("span", { class: "sr-only" }, "Column status", -1), _t = {
+}, yt = { class: "px-2" }, wt = { class: "divide-y divide-gray-200" }, xt = { class: "text-sm text-gray-900" }, kt = ["aria-pressed", "aria-labelledby", "aria-describedby", "dusk", "onClick"], _t = /* @__PURE__ */ l("span", { class: "sr-only" }, "Column status", -1), $t = {
   __name: "TableColumns",
   props: {
     columns: {
@@ -543,17 +546,17 @@ const Ae = ["dusk", "value"], He = ["value"], ie = {
           }]),
           viewBox: "0 0 20 20",
           fill: "currentColor"
-        }, vt, 2))
+        }, mt, 2))
       ]),
       default: C(() => [
-        l("div", mt, [
-          l("div", bt, [
-            l("ul", yt, [
+        l("div", bt, [
+          l("div", yt, [
+            l("ul", wt, [
               (a(!0), h(P, null, O(o.columns, (c, r) => D((a(), h("li", {
                 key: r,
                 class: "py-2 flex items-center justify-between"
               }, [
-                l("p", wt, p(c.label), 1),
+                l("p", xt, p(c.label), 1),
                 l("button", {
                   type: "button",
                   class: $(["ms-4 relative inline-flex flex-shrink-0 h-6 w-11 border-2 border-transparent rounded-full cursor-pointer transition-colors ease-in-out duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-light-blue-500", {
@@ -566,7 +569,7 @@ const Ae = ["dusk", "value"], He = ["value"], ie = {
                   dusk: `toggle-column-${c.key}`,
                   onClick: B((n) => e.onChange(c.key, c.hidden), ["prevent"])
                 }, [
-                  kt,
+                  _t,
                   l("span", {
                     "aria-hidden": "true",
                     class: $([{
@@ -574,7 +577,7 @@ const Ae = ["dusk", "value"], He = ["value"], ie = {
                       "translate-x-0": c.hidden
                     }, "inline-block h-5 w-5 rounded-full bg-white shadow transform ring-0 transition ease-in-out duration-200"])
                   }, null, 2)
-                ], 10, xt)
+                ], 10, kt)
               ])), [
                 [R, c.can_be_hidden]
               ])), 128))
@@ -585,18 +588,18 @@ const Ae = ["dusk", "value"], He = ["value"], ie = {
       _: 1
     }, 8, ["active"]));
   }
-}, $t = /* @__PURE__ */ l("path", {
+}, Ct = /* @__PURE__ */ l("path", {
   "fill-rule": "evenodd",
   d: "M3 3a1 1 0 011-1h12a1 1 0 011 1v3a1 1 0 01-.293.707L12 11.414V15a1 1 0 01-.293.707l-2 2A1 1 0 018 17v-5.586L3.293 6.707A1 1 0 013 6V3z",
   "clip-rule": "evenodd"
-}, null, -1), Ct = [
-  $t
-], St = {
+}, null, -1), St = [
+  Ct
+], qt = {
   role: "menu",
   "aria-orientation": "horizontal",
   "aria-labelledby": "filter-menu",
   class: "min-w-max"
-}, qt = { class: "text-xs uppercase tracking-wide bg-gray-100 p-3" }, Bt = { class: "p-2" }, Ft = ["name", "value", "onChange"], Pt = ["value"], Ot = {
+}, Bt = { class: "text-xs uppercase tracking-wide bg-gray-100 p-3" }, Ft = { class: "p-2" }, Pt = ["name", "value", "onChange"], Ot = ["value"], Tt = {
   __name: "TableFilter",
   props: {
     hasEnabledFilters: {
@@ -627,13 +630,13 @@ const Ae = ["dusk", "value"], He = ["value"], ie = {
           }]),
           viewBox: "0 0 20 20",
           fill: "currentColor"
-        }, Ct, 2))
+        }, St, 2))
       ]),
       default: C(() => [
-        l("div", St, [
+        l("div", qt, [
           (a(!0), h(P, null, O(e.filters, (i, c) => (a(), h("div", { key: c }, [
-            l("h3", qt, p(i.label), 1),
-            l("div", Bt, [
+            l("h3", Bt, p(i.label), 1),
+            l("div", Ft, [
               i.type === "select" ? (a(), h("select", {
                 key: 0,
                 name: i.key,
@@ -644,8 +647,8 @@ const Ae = ["dusk", "value"], He = ["value"], ie = {
                 (a(!0), h(P, null, O(i.options, (r, n) => (a(), h("option", {
                   key: n,
                   value: n
-                }, p(r), 9, Pt))), 128))
-              ], 40, Ft)) : k("", !0)
+                }, p(r), 9, Ot))), 128))
+              ], 40, Pt)) : k("", !0)
             ])
           ]))), 128))
         ])
@@ -653,7 +656,7 @@ const Ae = ["dusk", "value"], He = ["value"], ie = {
       _: 1
     }, 8, ["active"]));
   }
-}, Tt = { class: "relative" }, jt = ["placeholder", "value"], It = /* @__PURE__ */ l("div", { class: "absolute inset-y-0 start-0 ps-3 flex items-center pointer-events-none" }, [
+}, jt = { class: "relative" }, It = ["placeholder", "value"], Vt = /* @__PURE__ */ l("div", { class: "absolute inset-y-0 start-0 ps-3 flex items-center pointer-events-none" }, [
   /* @__PURE__ */ l("svg", {
     xmlns: "http://www.w3.org/2000/svg",
     class: "h-5 w-5 text-gray-400",
@@ -666,7 +669,7 @@ const Ae = ["dusk", "value"], He = ["value"], ie = {
       "clip-rule": "evenodd"
     })
   ])
-], -1), Vt = {
+], -1), Lt = {
   __name: "TableGlobalSearch",
   props: {
     label: {
@@ -685,7 +688,7 @@ const Ae = ["dusk", "value"], He = ["value"], ie = {
     }
   },
   setup(e) {
-    return (o, u) => (a(), h("div", Tt, [
+    return (o, u) => (a(), h("div", jt, [
       l("input", {
         class: "block w-full ps-9 text-sm rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 border-gray-300",
         placeholder: e.label,
@@ -693,11 +696,11 @@ const Ae = ["dusk", "value"], He = ["value"], ie = {
         type: "text",
         name: "global",
         onInput: u[0] || (u[0] = (i) => e.onChange(i.target.value))
-      }, null, 40, jt),
-      It
+      }, null, 40, It),
+      Vt
     ]));
   }
-}, Lt = { class: "flex rounded-md shadow-sm relative mt-3" }, Mt = ["for"], zt = /* @__PURE__ */ l("svg", {
+}, Mt = { class: "flex rounded-md shadow-sm relative mt-3" }, zt = ["for"], Dt = /* @__PURE__ */ l("svg", {
   xmlns: "http://www.w3.org/2000/svg",
   class: "h-5 w-5 me-2 text-gray-400",
   viewBox: "0 0 20 20",
@@ -708,7 +711,7 @@ const Ae = ["dusk", "value"], He = ["value"], ie = {
     d: "M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z",
     "clip-rule": "evenodd"
   })
-], -1), Dt = ["id", "name", "value", "onInput"], Rt = { class: "absolute inset-y-0 end-0 pe-3 flex items-center" }, Et = ["dusk", "onClick"], Wt = /* @__PURE__ */ l("span", { class: "sr-only" }, "Remove search", -1), Nt = /* @__PURE__ */ l("svg", {
+], -1), Rt = ["id", "name", "value", "onInput"], Et = { class: "absolute inset-y-0 end-0 pe-3 flex items-center" }, Wt = ["dusk", "onClick"], Nt = /* @__PURE__ */ l("span", { class: "sr-only" }, "Remove search", -1), At = /* @__PURE__ */ l("svg", {
   xmlns: "http://www.w3.org/2000/svg",
   class: "h-5 w-5",
   fill: "none",
@@ -721,10 +724,10 @@ const Ae = ["dusk", "value"], He = ["value"], ie = {
     "stroke-width": "2",
     d: "M6 18L18 6M6 6l12 12"
   })
-], -1), At = [
-  Wt,
-  Nt
-], Ht = {
+], -1), Ht = [
+  Nt,
+  At
+], Gt = {
   __name: "TableSearchRows",
   props: {
     searchInputs: {
@@ -760,14 +763,14 @@ const Ae = ["dusk", "value"], He = ["value"], ie = {
       key: m,
       class: "px-4 sm:px-0"
     }, [
-      l("div", Lt, [
+      l("div", Mt, [
         l("label", {
           for: f.key,
           class: "inline-flex items-center px-4 rounded-s-md border border-e-0 border-gray-300 bg-gray-50 text-gray-500 text-sm"
         }, [
-          zt,
+          Dt,
           l("span", null, p(f.label), 1)
-        ], 8, Mt),
+        ], 8, zt),
         (a(), h("input", {
           id: f.key,
           ref_for: !0,
@@ -778,20 +781,20 @@ const Ae = ["dusk", "value"], He = ["value"], ie = {
           type: "text",
           class: "flex-1 min-w-0 block w-full px-3 py-2 rounded-none rounded-e-md focus:ring-indigo-500 focus:border-indigo-500 text-sm border-gray-300",
           onInput: (F) => e.onChange(f.key, F.target.value)
-        }, null, 40, Dt)),
-        l("div", Rt, [
+        }, null, 40, Rt)),
+        l("div", Et, [
           l("button", {
             class: "rounded-md text-gray-400 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500",
             dusk: `remove-search-row-${f.key}`,
             onClick: B((F) => e.onRemove(f.key), ["prevent"])
-          }, At, 8, Et)
+          }, Ht, 8, Wt)
         ])
       ])
     ])), [
       [R, f.value !== null || c(f.key)]
     ])), 128));
   }
-}, Gt = /* @__PURE__ */ l("svg", {
+}, Kt = /* @__PURE__ */ l("svg", {
   xmlns: "http://www.w3.org/2000/svg",
   class: "h-5 w-5 me-2 text-gray-400",
   viewBox: "0 0 20 20",
@@ -802,10 +805,10 @@ const Ae = ["dusk", "value"], He = ["value"], ie = {
     d: "M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z",
     "clip-rule": "evenodd"
   })
-], -1), Kt = /* @__PURE__ */ l("span", null, "Reset", -1), Qt = [
-  Gt,
-  Kt
-], Ut = {
+], -1), Qt = /* @__PURE__ */ l("span", null, "Reset", -1), Ut = [
+  Kt,
+  Qt
+], Yt = {
   __name: "TableReset",
   props: {
     onClick: {
@@ -821,32 +824,32 @@ const Ae = ["dusk", "value"], He = ["value"], ie = {
       class: "w-full bg-white border rounded-md shadow-sm px-4 py-2 inline-flex justify-center text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 border-gray-300",
       "aria-haspopup": "true",
       onClick: u[0] || (u[0] = B((...i) => e.onClick && e.onClick(...i), ["prevent"]))
-    }, Qt, 512));
+    }, Ut, 512));
   }
-}, Yt = (e, o) => {
+}, Jt = (e, o) => {
   const u = e.__vccOpts || e;
   for (const [i, c] of o)
     u[i] = c;
   return u;
-}, Jt = {}, Xt = { class: "flex flex-col" }, Zt = { class: "-my-2 overflow-x-auto sm:-mx-6 lg:-mx-8" }, er = { class: "py-2 align-middle inline-block min-w-full sm:px-6 lg:px-8" }, tr = { class: "shadow border-b border-gray-200 relative" };
-function rr(e, o) {
-  return a(), h("div", Xt, [
-    l("div", Zt, [
-      l("div", er, [
-        l("div", tr, [
+}, Xt = {}, Zt = { class: "flex flex-col" }, er = { class: "-my-2 overflow-x-auto sm:-mx-6 lg:-mx-8" }, tr = { class: "py-2 align-middle inline-block min-w-full sm:px-6 lg:px-8" }, rr = { class: "shadow border-b border-gray-200 relative" };
+function nr(e, o) {
+  return a(), h("div", Zt, [
+    l("div", er, [
+      l("div", tr, [
+        l("div", rr, [
           y(e.$slots, "default")
         ])
       ])
     ])
   ]);
 }
-const nr = /* @__PURE__ */ Yt(Jt, [["render", rr]]), sr = ["dusk"], lr = { class: "flex flex-row flex-wrap sm:flex-nowrap justify-start px-4 sm:px-0" }, ar = { class: "order-2 sm:order-1 me-2 sm:me-4" }, or = {
+const sr = /* @__PURE__ */ Jt(Xt, [["render", nr]]), lr = ["dusk"], ar = { class: "flex flex-row flex-wrap sm:flex-nowrap justify-start px-4 sm:px-0" }, or = { class: "order-2 sm:order-1 me-2 sm:me-4" }, ur = {
   key: 0,
   class: "flex flex-row w-full sm:w-auto sm:flex-grow order-1 sm:order-2 mb-2 sm:mb-0 sm:me-4"
-}, ur = {
+}, ir = {
   key: 0,
   class: "order-5 sm:order-3 sm:me-4 ms-auto"
-}, ir = { class: "min-w-full divide-y divide-gray-200 bg-white" }, cr = { class: "bg-gray-50" }, dr = { class: "font-medium text-xs uppercase text-start tracking-wider text-gray-500 py-3 px-6" }, hr = { class: "bg-white divide-y divide-gray-200" }, Fr = {
+}, cr = { class: "min-w-full divide-y divide-gray-200 bg-white" }, dr = { class: "bg-gray-50" }, hr = { class: "font-medium text-xs uppercase text-start tracking-wider text-gray-500 py-3 px-6" }, fr = { class: "bg-white divide-y divide-gray-200" }, Pr = {
   __name: "Table",
   props: {
     inertia: {
@@ -1051,15 +1054,15 @@ const nr = /* @__PURE__ */ Yt(Jt, [["render", rr]]), sr = ["dusk"], lr = { class
           dusk: `table-${e.name}`,
           class: $(["min-w-0", { "opacity-75": N.value }])
         }, [
-          l("div", lr, [
-            l("div", ar, [
+          l("div", ar, [
+            l("div", or, [
               y(s.$slots, "tableFilter", {
                 hasFilters: t(r).hasFilters,
                 hasEnabledFilters: t(r).hasEnabledFilters,
                 filters: t(r).filters,
                 onFilterChange: re
               }, () => [
-                t(r).hasFilters ? (a(), x(Ot, {
+                t(r).hasFilters ? (a(), x(Tt, {
                   key: 0,
                   "has-enabled-filters": t(r).hasEnabledFilters,
                   filters: t(r).filters,
@@ -1067,14 +1070,14 @@ const nr = /* @__PURE__ */ Yt(Jt, [["render", rr]]), sr = ["dusk"], lr = { class
                 }, null, 8, ["has-enabled-filters", "filters"])) : k("", !0)
               ])
             ]),
-            t(r).globalSearch ? (a(), h("div", or, [
+            t(r).globalSearch ? (a(), h("div", ur, [
               y(s.$slots, "tableGlobalSearch", {
                 hasGlobalSearch: t(r).globalSearch,
                 label: t(r).globalSearch ? t(r).globalSearch.label : null,
                 value: t(r).globalSearch ? t(r).globalSearch.value : null,
                 onChange: te
               }, () => [
-                t(r).globalSearch ? (a(), x(Vt, {
+                t(r).globalSearch ? (a(), x(Lt, {
                   key: 0,
                   class: "flex-grow",
                   label: t(r).globalSearch.label,
@@ -1087,8 +1090,8 @@ const nr = /* @__PURE__ */ Yt(Jt, [["render", rr]]), sr = ["dusk"], lr = { class
               canBeReset: "canBeReset",
               onClick: Z
             }, () => [
-              t(he) ? (a(), h("div", ur, [
-                z(Ut, { "on-click": Z })
+              t(he) ? (a(), h("div", ir, [
+                z(Yt, { "on-click": Z })
               ])) : k("", !0)
             ]),
             y(s.$slots, "tableAddSearchRow", {
@@ -1097,7 +1100,7 @@ const nr = /* @__PURE__ */ Yt(Jt, [["render", rr]]), sr = ["dusk"], lr = { class
               searchInputs: t(r).searchInputsWithoutGlobal,
               onAdd: X
             }, () => [
-              t(r).hasSearchInputs ? (a(), x(ft, {
+              t(r).hasSearchInputs ? (a(), x(gt, {
                 key: 0,
                 class: "order-3 sm:order-4 me-2 sm:me-4",
                 "search-inputs": t(r).searchInputsWithoutGlobal,
@@ -1111,7 +1114,7 @@ const nr = /* @__PURE__ */ Yt(Jt, [["render", rr]]), sr = ["dusk"], lr = { class
               hasHiddenColumns: t(r).hasHiddenColumns,
               onChange: se
             }, () => [
-              t(r).hasToggleableColumns ? (a(), x(_t, {
+              t(r).hasToggleableColumns ? (a(), x($t, {
                 key: 0,
                 class: "order-4 me-4 sm:me-0 sm:order-5",
                 columns: t(r).columns,
@@ -1126,7 +1129,7 @@ const nr = /* @__PURE__ */ Yt(Jt, [["render", rr]]), sr = ["dusk"], lr = { class
             forcedVisibleSearchInputs: m.value,
             onChange: E
           }, () => [
-            t(r).hasSearchInputsWithValue || m.value.length > 0 ? (a(), x(Ht, {
+            t(r).hasSearchInputsWithValue || m.value.length > 0 ? (a(), x(Gt, {
               key: 0,
               "search-inputs": t(r).searchInputsWithoutGlobal,
               "forced-visible-search-inputs": m.value,
@@ -1135,19 +1138,19 @@ const nr = /* @__PURE__ */ Yt(Jt, [["render", rr]]), sr = ["dusk"], lr = { class
             }, null, 8, ["search-inputs", "forced-visible-search-inputs"])) : k("", !0)
           ]),
           y(s.$slots, "tableWrapper", { meta: t(j) }, () => [
-            z(nr, {
+            z(sr, {
               class: $({ "mt-3": !t(q) })
             }, {
               default: C(() => [
                 y(s.$slots, "table", {}, () => [
-                  l("table", ir, [
-                    l("thead", cr, [
+                  l("table", cr, [
+                    l("thead", dr, [
                       y(s.$slots, "head", {
                         show: G,
                         sortBy: ae,
                         header: oe
                       }, () => [
-                        l("tr", dr, [
+                        l("tr", hr, [
                           (a(!0), h(P, null, O(t(r).columns, (g) => (a(), x(Ne, {
                             key: `table-${e.name}-header-${g.key}`,
                             cell: oe(g.key)
@@ -1155,7 +1158,7 @@ const nr = /* @__PURE__ */ Yt(Jt, [["render", rr]]), sr = ["dusk"], lr = { class
                         ])
                       ])
                     ]),
-                    l("tbody", hr, [
+                    l("tbody", fr, [
                       y(s.$slots, "body", { show: G }, () => [
                         (a(!0), h(P, null, O(t(w), (g, v) => (a(), h("tr", {
                           key: `table-${e.name}-row-${v}`,
@@ -1187,7 +1190,7 @@ const nr = /* @__PURE__ */ Yt(Jt, [["render", rr]]), sr = ["dusk"], lr = { class
                   perPageOptions: t(r).perPageOptions,
                   onPerPageChange: ne
                 }, () => [
-                  z(it, {
+                  z(ct, {
                     "on-click": H,
                     "has-data": t(W),
                     meta: t(j),
@@ -1199,7 +1202,7 @@ const nr = /* @__PURE__ */ Yt(Jt, [["render", rr]]), sr = ["dusk"], lr = { class
               _: 3
             }, 8, ["class"])
           ])
-        ], 10, sr))
+        ], 10, lr))
       ]),
       _: 3
     }));
@@ -1209,16 +1212,16 @@ export {
   Y as ButtonWithDropdown,
   Ne as HeaderCell,
   je as OnClickOutside,
-  it as Pagination,
-  Fr as Table,
-  ft as TableAddSearchRow,
-  _t as TableColumns,
-  Ot as TableFilter,
-  Vt as TableGlobalSearch,
-  Ut as TableReset,
-  Ht as TableSearchRows,
-  nr as TableWrapper,
+  ct as Pagination,
+  Pr as Table,
+  gt as TableAddSearchRow,
+  $t as TableColumns,
+  Tt as TableFilter,
+  Lt as TableGlobalSearch,
+  Yt as TableReset,
+  Gt as TableSearchRows,
+  sr as TableWrapper,
   ce as getTranslations,
-  qr as setTranslation,
-  Br as setTranslations
+  Br as setTranslation,
+  Fr as setTranslations
 };
