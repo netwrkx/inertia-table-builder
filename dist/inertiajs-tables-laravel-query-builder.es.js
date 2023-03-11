@@ -845,7 +845,7 @@ const sr = /* @__PURE__ */ Jt(Xt, [["render", nr]]), lr = ["dusk"], ar = { class
   class: "flex flex-row w-full sm:w-auto sm:flex-grow order-1 sm:order-2 mb-2 sm:mb-0 sm:me-4"
 }, ir = {
   key: 0,
-  class: "order-5 sm:order-3 sm:me-4 ms-auto"
+  class: "order-5 sm:order-3 sm:me-4 ms-0"
 }, cr = { class: "min-w-full divide-y divide-gray-200 bg-white" }, dr = { class: "bg-gray-50" }, hr = { class: "font-medium text-xs uppercase text-start tracking-wider text-gray-500 py-3 px-6" }, fr = { class: "bg-white divide-y divide-gray-200" }, Pr = {
   __name: "Table",
   props: {
