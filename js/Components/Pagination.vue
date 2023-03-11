@@ -91,8 +91,7 @@
         />
 
         <p
-          dir="ltr"
-          class="hidden lg:block text-sm text-gray-700 flex-grow"
+          class="hidden lg:block text-sm text-gray-700 flex-grow p-4"
         >
           <span class="font-medium">{{ pagination.from }}</span>
           {{ translations.to }}

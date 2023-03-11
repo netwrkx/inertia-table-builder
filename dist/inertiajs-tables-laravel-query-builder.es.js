@@ -1,4 +1,4 @@
-import { ref as S, onMounted as Q, onBeforeUnmount as me, openBlock as a, createElementBlock as h, renderSlot as y, watch as U, createBlock as x, withCtx as C, createElementVNode as l, normalizeClass as $, withModifiers as B, withDirectives as D, vShow as R, resolveDynamicComponent as I, toDisplayString as p, createCommentVNode as k, computed as _, Fragment as P, renderList as O, unref as t, createVNode as z, createTextVNode as M, nextTick as be, getCurrentInstance as ye, onUnmounted as we, Transition as xe } from "vue";
+import { ref as S, onMounted as Q, onBeforeUnmount as me, openBlock as a, createElementBlock as h, renderSlot as y, watch as U, createBlock as x, withCtx as C, createElementVNode as l, normalizeClass as $, withModifiers as B, withDirectives as D, vShow as R, resolveDynamicComponent as I, toDisplayString as g, createCommentVNode as k, computed as _, Fragment as P, renderList as O, unref as t, createVNode as z, createTextVNode as M, nextTick as be, getCurrentInstance as ye, onUnmounted as we, Transition as xe } from "vue";
 import { createPopper as ke } from "@popperjs/core/lib/popper-lite";
 import _e from "@popperjs/core/lib/modifiers/preventOverflow";
 import $e from "@popperjs/core/lib/modifiers/flip";
@@ -141,7 +141,7 @@ const je = {
         default: C(() => [
           l("span", Me, [
             y(i.$slots, "label", {}, () => [
-              l("span", ze, p(e.cell.label), 1)
+              l("span", ze, g(e.cell.label), 1)
             ]),
             y(i.$slots, "sort", {}, () => [
               e.cell.sortable ? (a(), h("svg", {
@@ -228,7 +228,7 @@ const Ae = ["dusk", "value"], He = ["value"], ie = {
       (a(!0), h(P, null, O(t(i), (n) => (a(), h("option", {
         key: n,
         value: n
-      }, p(n) + " " + p(t(u).per_page), 9, He))), 128))
+      }, g(n) + " " + g(t(u).per_page), 9, He))), 128))
     ], 40, Ae));
   }
 }, Ge = {
@@ -263,10 +263,7 @@ const Ae = ["dusk", "value"], He = ["value"], ie = {
 ], -1), Xe = {
   key: 2,
   class: "hidden sm:flex-1 sm:flex sm:items-center sm:justify-between"
-}, Ze = { class: "flex flex-row space-x-4 items-center flex-grow" }, et = {
-  dir: "ltr",
-  class: "hidden lg:block text-sm text-gray-700 flex-grow"
-}, tt = { class: "font-medium" }, rt = { class: "font-medium" }, nt = { class: "font-medium" }, st = { dir: "ltr" }, lt = {
+}, Ze = { class: "flex flex-row space-x-4 items-center flex-grow" }, et = { class: "hidden lg:block text-sm text-gray-700 flex-grow p-4" }, tt = { class: "font-medium" }, rt = { class: "font-medium" }, nt = { class: "font-medium" }, st = { dir: "ltr" }, lt = {
   class: "relative z-0 inline-flex rounded-md shadow-sm -space-x-px",
   "aria-label": "Pagination"
 }, at = { class: "sr-only" }, ot = /* @__PURE__ */ l("svg", {
@@ -325,7 +322,7 @@ const Ae = ["dusk", "value"], He = ["value"], ie = {
   setup(e) {
     const o = e, u = ce(), i = _(() => "links" in r.value ? r.value.links.length > 0 : !1), c = _(() => Object.keys(r.value).length > 0), r = _(() => o.meta), n = _(() => "prev_page_url" in r.value ? r.value.prev_page_url : null), f = _(() => "next_page_url" in r.value ? r.value.next_page_url : null), m = _(() => parseInt(r.value.per_page));
     return (F, q) => t(c) ? (a(), h("nav", Ge, [
-      !e.hasData || t(r).total < 1 ? (a(), h("p", Ke, p(t(u).no_results_found), 1)) : k("", !0),
+      !e.hasData || t(r).total < 1 ? (a(), h("p", Ke, g(t(u).no_results_found), 1)) : k("", !0),
       e.hasData ? (a(), h("div", {
         key: 1,
         class: $(["flex-1 flex justify-between", { "sm:hidden": t(i) }])
@@ -341,7 +338,7 @@ const Ae = ["dusk", "value"], He = ["value"], ie = {
         }, {
           default: C(() => [
             Qe,
-            l("span", Ue, p(t(u).previous), 1)
+            l("span", Ue, g(t(u).previous), 1)
           ]),
           _: 1
         }, 8, ["class", "href", "dusk"])),
@@ -361,7 +358,7 @@ const Ae = ["dusk", "value"], He = ["value"], ie = {
           onClick: q[1] || (q[1] = B((w) => e.onClick(t(f)), ["prevent"]))
         }, {
           default: C(() => [
-            l("span", Ye, p(t(u).next), 1),
+            l("span", Ye, g(t(u).next), 1),
             Je
           ]),
           _: 1
@@ -376,12 +373,12 @@ const Ae = ["dusk", "value"], He = ["value"], ie = {
             "on-change": e.onPerPageChange
           }, null, 8, ["value", "options", "on-change"]),
           l("p", et, [
-            l("span", tt, p(t(r).from), 1),
-            M(" " + p(t(u).to) + " ", 1),
-            l("span", rt, p(t(r).to), 1),
-            M(" " + p(t(u).of) + " ", 1),
-            l("span", nt, p(t(r).total), 1),
-            M(" " + p(t(u).results), 1)
+            l("span", tt, g(t(r).from), 1),
+            M(" " + g(t(u).to) + " ", 1),
+            l("span", rt, g(t(r).to), 1),
+            M(" " + g(t(u).of) + " ", 1),
+            l("span", nt, g(t(r).total), 1),
+            M(" " + g(t(u).results), 1)
           ])
         ]),
         l("div", st, [
@@ -396,7 +393,7 @@ const Ae = ["dusk", "value"], He = ["value"], ie = {
               onClick: q[2] || (q[2] = B((w) => e.onClick(t(n)), ["prevent"]))
             }, {
               default: C(() => [
-                l("span", at, p(t(u).previous), 1),
+                l("span", at, g(t(u).previous), 1),
                 ot
               ]),
               _: 1
@@ -415,7 +412,7 @@ const Ae = ["dusk", "value"], He = ["value"], ie = {
                   onClick: B((W) => e.onClick(w.url), ["prevent"])
                 }, {
                   default: C(() => [
-                    M(p(w.label), 1)
+                    M(g(w.label), 1)
                   ]),
                   _: 2
                 }, 1032, ["href", "dusk", "class", "onClick"])) : k("", !0)
@@ -431,7 +428,7 @@ const Ae = ["dusk", "value"], He = ["value"], ie = {
               onClick: q[3] || (q[3] = B((w) => e.onClick(t(f)), ["prevent"]))
             }, {
               default: C(() => [
-                l("span", ut, p(t(u).next), 1),
+                l("span", ut, g(t(u).next), 1),
                 it
               ]),
               _: 1
@@ -457,7 +454,7 @@ const Ae = ["dusk", "value"], He = ["value"], ie = {
   "aria-orientation": "horizontal",
   "aria-labelledby": "add-search-input-menu",
   class: "min-w-max"
-}, ft = ["dusk", "onClick"], gt = {
+}, ft = ["dusk", "onClick"], pt = {
   __name: "TableAddSearchRow",
   props: {
     searchInputs: {
@@ -496,18 +493,18 @@ const Ae = ["dusk", "value"], He = ["value"], ie = {
             class: "text-start w-full px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900",
             role: "menuitem",
             onClick: B((m) => i(n.key), ["prevent"])
-          }, p(n.label), 9, ft))), 128))
+          }, g(n.label), 9, ft))), 128))
         ])
       ]),
       _: 1
     }, 8, ["disabled"]));
   }
-}, pt = /* @__PURE__ */ l("path", { d: "M10 12a2 2 0 100-4 2 2 0 000 4z" }, null, -1), vt = /* @__PURE__ */ l("path", {
+}, gt = /* @__PURE__ */ l("path", { d: "M10 12a2 2 0 100-4 2 2 0 000 4z" }, null, -1), vt = /* @__PURE__ */ l("path", {
   "fill-rule": "evenodd",
   d: "M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z",
   "clip-rule": "evenodd"
 }, null, -1), mt = [
-  pt,
+  gt,
   vt
 ], bt = {
   role: "menu",
@@ -556,7 +553,7 @@ const Ae = ["dusk", "value"], He = ["value"], ie = {
                 key: r,
                 class: "py-2 flex items-center justify-between"
               }, [
-                l("p", xt, p(c.label), 1),
+                l("p", xt, g(c.label), 1),
                 l("button", {
                   type: "button",
                   class: $(["ms-4 relative inline-flex flex-shrink-0 h-6 w-11 border-2 border-transparent rounded-full cursor-pointer transition-colors ease-in-out duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-light-blue-500", {
@@ -635,7 +632,7 @@ const Ae = ["dusk", "value"], He = ["value"], ie = {
       default: C(() => [
         l("div", qt, [
           (a(!0), h(P, null, O(e.filters, (i, c) => (a(), h("div", { key: c }, [
-            l("h3", Bt, p(i.label), 1),
+            l("h3", Bt, g(i.label), 1),
             l("div", Ft, [
               i.type === "select" ? (a(), h("select", {
                 key: 0,
@@ -647,7 +644,7 @@ const Ae = ["dusk", "value"], He = ["value"], ie = {
                 (a(!0), h(P, null, O(i.options, (r, n) => (a(), h("option", {
                   key: n,
                   value: n
-                }, p(r), 9, Ot))), 128))
+                }, g(r), 9, Ot))), 128))
               ], 40, Pt)) : k("", !0)
             ])
           ]))), 128))
@@ -769,7 +766,7 @@ const Ae = ["dusk", "value"], He = ["value"], ie = {
           class: "inline-flex items-center px-4 rounded-s-md border border-e-0 border-gray-300 bg-gray-50 text-gray-500 text-sm"
         }, [
           Dt,
-          l("span", null, p(f.label), 1)
+          l("span", null, g(f.label), 1)
         ], 8, zt),
         (a(), h("input", {
           id: f.key,
@@ -919,10 +916,10 @@ const sr = /* @__PURE__ */ Jt(Xt, [["render", nr]]), lr = ["dusk"], ar = { class
       const s = K.parse(location.search.substring(1));
       if (s[f.value] > 1)
         return !0;
-      const g = o.name === "default" ? "" : o.name + "_";
+      const p = o.name === "default" ? "" : o.name + "_";
       let v = !1;
       return T(["filter", "columns", "cursor", "sort"], (b) => {
-        const L = s[g + b];
+        const L = s[p + b];
         b === "sort" && L === r.value.defaultSort || L !== void 0 && (v = !0);
       }), v;
     });
@@ -939,26 +936,26 @@ const sr = /* @__PURE__ */ Jt(Xt, [["render", nr]]), lr = ["dusk"], ar = { class
     function E(s, d) {
       clearTimeout(ee[s]), ee[s] = setTimeout(() => {
         A.value && o.preventOverlappingRequests && A.value.cancel();
-        const g = V("searchInputs", s);
-        n.value.searchInputs[g].value = d, n.value.cursor = null, n.value.page = 1;
+        const p = V("searchInputs", s);
+        n.value.searchInputs[p].value = d, n.value.cursor = null, n.value.page = 1;
       }, o.inputDebounceMs);
     }
     function te(s) {
       E("global", s);
     }
     function re(s, d) {
-      const g = V("filters", s);
-      n.value.filters[g].value = d, n.value.cursor = null, n.value.page = 1;
+      const p = V("filters", s);
+      n.value.filters[p].value = d, n.value.cursor = null, n.value.page = 1;
     }
     function ne(s) {
       n.value.cursor = null, n.value.perPage = s, n.value.page = 1;
     }
     function V(s, d) {
-      return Fe(n.value[s], (g) => g.key == d);
+      return Fe(n.value[s], (p) => p.key == d);
     }
     function se(s, d) {
-      const g = V("columns", s);
-      n.value.columns[g].hidden = !d;
+      const p = V("columns", s);
+      n.value.columns[p].hidden = !d;
     }
     function fe() {
       let s = {};
@@ -968,32 +965,32 @@ const sr = /* @__PURE__ */ Jt(Xt, [["render", nr]]), lr = ["dusk"], ar = { class
         d.value !== null && (s[d.key] = d.value);
       }), s;
     }
-    function ge() {
-      const s = n.value.columns;
-      let d = Be(s, (v) => !v.hidden), g = Oe(d, (v) => v.key).sort();
-      return Pe(g, r.value.defaultVisibleToggleableColumns) ? {} : g;
-    }
     function pe() {
-      const s = fe(), d = ge(), g = {};
-      Object.keys(s).length > 0 && (g.filter = s), Object.keys(d).length > 0 && (g.columns = d);
+      const s = n.value.columns;
+      let d = Be(s, (v) => !v.hidden), p = Oe(d, (v) => v.key).sort();
+      return Pe(p, r.value.defaultVisibleToggleableColumns) ? {} : p;
+    }
+    function ge() {
+      const s = fe(), d = pe(), p = {};
+      Object.keys(s).length > 0 && (p.filter = s), Object.keys(d).length > 0 && (p.columns = d);
       const v = n.value.cursor, b = n.value.page, L = n.value.sort, ue = n.value.perPage;
-      return v && (g.cursor = v), b > 1 && (g.page = b), ue > 1 && (g.perPage = ue), L && (g.sort = L), g;
+      return v && (p.cursor = v), b > 1 && (p.page = b), ue > 1 && (p.perPage = ue), L && (p.sort = L), p;
     }
     function ve() {
       const s = K.parse(location.search.substring(1)), d = o.name === "default" ? "" : o.name + "_";
       T(["filter", "columns", "cursor", "sort"], (v) => {
         delete s[d + v];
-      }), delete s[f.value], T(pe(), (v, b) => {
+      }), delete s[f.value], T(ge(), (v, b) => {
         b === "page" ? s[f.value] = v : b === "perPage" ? s.perPage = v : s[d + b] = v;
       });
-      let g = K.stringify(s, {
+      let p = K.stringify(s, {
         filter(v, b) {
           return typeof b == "object" && b !== null ? Te(b) : b;
         },
         skipNulls: !0,
         strictNullHandling: !0
       });
-      return (!g || g === f.value + "=1") && (g = ""), g;
+      return (!p || p === f.value + "=1") && (p = ""), p;
     }
     const N = S(!1), A = S(null);
     function H(s) {
@@ -1015,8 +1012,8 @@ const sr = /* @__PURE__ */ Jt(Xt, [["render", nr]]), lr = ["dusk"], ar = { class
           },
           onSuccess() {
             if ("queryBuilderProps" in i.page.props && (n.value.cursor = r.value.cursor, n.value.page = r.value.page), o.preserveScroll === "table-top") {
-              const g = F.value.getBoundingClientRect().top + window.pageYOffset + -8;
-              window.scrollTo({ top: g });
+              const p = F.value.getBoundingClientRect().top + window.pageYOffset + -8;
+              window.scrollTo({ top: p });
             }
             c.value++;
           }
@@ -1042,8 +1039,8 @@ const sr = /* @__PURE__ */ Jt(Xt, [["render", nr]]), lr = ["dusk"], ar = { class
       return !n.value.columns[d].hidden;
     }
     function oe(s) {
-      const d = V("columns", s), g = qe(r.value.columns[d]);
-      return g.onSort = ae, g;
+      const d = V("columns", s), p = qe(r.value.columns[d]);
+      return p.onSort = ae, p;
     }
     return (s, d) => (a(), x(xe, null, {
       default: C(() => [
@@ -1100,7 +1097,7 @@ const sr = /* @__PURE__ */ Jt(Xt, [["render", nr]]), lr = ["dusk"], ar = { class
               searchInputs: t(r).searchInputsWithoutGlobal,
               onAdd: X
             }, () => [
-              t(r).hasSearchInputs ? (a(), x(gt, {
+              t(r).hasSearchInputs ? (a(), x(pt, {
                 key: 0,
                 class: "order-3 sm:order-4 me-2 sm:me-4",
                 "search-inputs": t(r).searchInputsWithoutGlobal,
@@ -1151,16 +1148,16 @@ const sr = /* @__PURE__ */ Jt(Xt, [["render", nr]]), lr = ["dusk"], ar = { class
                         header: oe
                       }, () => [
                         l("tr", hr, [
-                          (a(!0), h(P, null, O(t(r).columns, (g) => (a(), x(Ne, {
-                            key: `table-${e.name}-header-${g.key}`,
-                            cell: oe(g.key)
+                          (a(!0), h(P, null, O(t(r).columns, (p) => (a(), x(Ne, {
+                            key: `table-${e.name}-header-${p.key}`,
+                            cell: oe(p.key)
                           }, null, 8, ["cell"]))), 128))
                         ])
                       ])
                     ]),
                     l("tbody", fr, [
                       y(s.$slots, "body", { show: G }, () => [
-                        (a(!0), h(P, null, O(t(w), (g, v) => (a(), h("tr", {
+                        (a(!0), h(P, null, O(t(w), (p, v) => (a(), h("tr", {
                           key: `table-${e.name}-row-${v}`,
                           class: $(["", {
                             "bg-gray-50": e.striped && v % 2,
@@ -1172,8 +1169,8 @@ const sr = /* @__PURE__ */ Jt(Xt, [["render", nr]]), lr = ["dusk"], ar = { class
                             key: `table-${e.name}-row-${v}-column-${b.key}`,
                             class: "text-sm py-4 px-6 text-gray-500 whitespace-nowrap"
                           }, [
-                            y(s.$slots, `cell(${b.key})`, { item: g }, () => [
-                              M(p(g[b.key]), 1)
+                            y(s.$slots, `cell(${b.key})`, { item: p }, () => [
+                              M(g(p[b.key]), 1)
                             ])
                           ])), [
                             [R, G(b.key)]
@@ -1214,7 +1211,7 @@ export {
   je as OnClickOutside,
   ct as Pagination,
   Pr as Table,
-  gt as TableAddSearchRow,
+  pt as TableAddSearchRow,
   $t as TableColumns,
   Tt as TableFilter,
   Lt as TableGlobalSearch,
