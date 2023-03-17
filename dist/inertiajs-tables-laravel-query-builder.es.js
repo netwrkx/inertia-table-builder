@@ -1,4 +1,4 @@
-import { ref as S, onMounted as Q, onBeforeUnmount as be, openBlock as a, createElementBlock as f, renderSlot as y, watch as U, createBlock as x, withCtx as C, createElementVNode as s, normalizeClass as $, withModifiers as B, withDirectives as D, vShow as R, resolveDynamicComponent as j, toDisplayString as v, createCommentVNode as k, computed as _, Fragment as P, renderList as O, unref as t, createVNode as z, createTextVNode as V, nextTick as ye, getCurrentInstance as we, onUnmounted as xe, Transition as ke } from "vue";
+import { ref as S, onMounted as Q, onBeforeUnmount as be, openBlock as a, createElementBlock as f, renderSlot as y, watch as U, createBlock as x, withCtx as C, createElementVNode as s, normalizeClass as $, withModifiers as B, withDirectives as D, vShow as R, resolveDynamicComponent as j, toDisplayString as v, createCommentVNode as k, computed as _, Fragment as P, renderList as O, unref as t, createVNode as z, createTextVNode as M, nextTick as ye, getCurrentInstance as we, onUnmounted as xe, Transition as ke } from "vue";
 import { createPopper as _e } from "@popperjs/core/lib/popper-lite";
 import $e from "@popperjs/core/lib/modifiers/preventOverflow";
 import Ce from "@popperjs/core/lib/modifiers/flip";
@@ -374,11 +374,11 @@ const He = ["dusk", "value"], Ge = ["value"], ie = {
           }, null, 8, ["value", "options", "on-change"]),
           s("p", tt, [
             s("span", rt, v(t(r).from), 1),
-            V(" " + v(t(c).to) + " ", 1),
+            M(" " + v(t(c).to) + " ", 1),
             s("span", nt, v(t(r).to), 1),
-            V(" " + v(t(c).of) + " ", 1),
+            M(" " + v(t(c).of) + " ", 1),
             s("span", lt, v(t(r).total), 1),
-            V(" " + v(t(c).results), 1)
+            M(" " + v(t(c).results), 1)
           ])
         ]),
         s("div", st, [
@@ -412,7 +412,7 @@ const He = ["dusk", "value"], Ge = ["value"], ie = {
                   onClick: B((N) => e.onClick(w.url), ["prevent"])
                 }, {
                   default: C(() => [
-                    V(v(w.label), 1)
+                    M(v(w.label), 1)
                   ]),
                   _: 2
                 }, 1032, ["href", "dusk", "class", "onClick"])) : k("", !0)
@@ -919,8 +919,8 @@ const sr = /* @__PURE__ */ Xt(Zt, [["render", lr]]), ar = ["dusk"], or = { class
       const u = o.name === "default" ? "" : o.name + "_";
       let p = !1;
       return T(["filter", "columns", "cursor", "sort"], (b) => {
-        const M = n[u + b];
-        b === "sort" && M === r.value.defaultSort || M !== void 0 && (p = !0);
+        const L = n[u + b];
+        b === "sort" && L === r.value.defaultSort || L !== void 0 && (p = !0);
       }), p;
     });
     function Z() {
@@ -936,7 +936,7 @@ const sr = /* @__PURE__ */ Xt(Zt, [["render", lr]]), ar = ["dusk"], or = { class
     function E(n, i) {
       clearTimeout(ee[n]), ee[n] = setTimeout(() => {
         A.value && o.preventOverlappingRequests && A.value.cancel();
-        const u = L("searchInputs", n);
+        const u = V("searchInputs", n);
         l.value.searchInputs[u].value = i, l.value.cursor = null, l.value.page = 1;
       }, o.inputDebounceMs);
     }
@@ -944,17 +944,17 @@ const sr = /* @__PURE__ */ Xt(Zt, [["render", lr]]), ar = ["dusk"], or = { class
       E("global", n);
     }
     function re(n, i) {
-      const u = L("filters", n);
+      const u = V("filters", n);
       l.value.filters[u].value = i, l.value.cursor = null, l.value.page = 1;
     }
     function ne(n) {
       l.value.cursor = null, l.value.perPage = n, l.value.page = 1;
     }
-    function L(n, i) {
+    function V(n, i) {
       return Pe(l.value[n], (u) => u.key == i);
     }
     function le(n, i) {
-      const u = L("columns", n);
+      const u = V("columns", n);
       l.value.columns[u].hidden = !i;
     }
     function fe() {
@@ -973,8 +973,8 @@ const sr = /* @__PURE__ */ Xt(Zt, [["render", lr]]), ar = ["dusk"], or = { class
     function pe() {
       const n = fe(), i = ge(), u = {};
       Object.keys(n).length > 0 && (u.filter = n), Object.keys(i).length > 0 && (u.columns = i);
-      const p = l.value.cursor, b = l.value.page, M = l.value.sort, ue = l.value.perPage;
-      return p && (u.cursor = p), b > 1 && (u.page = b), ue > 1 && (u.perPage = ue), M && (u.sort = M), u;
+      const p = l.value.cursor, b = l.value.page, L = l.value.sort, ue = l.value.perPage;
+      return p && (u.cursor = p), b > 1 && (u.page = b), ue > 1 && (u.perPage = ue), L && (u.sort = L), u;
     }
     function ve() {
       const n = K.parse(location.search.substring(1)), i = o.name === "default" ? "" : o.name + "_";
@@ -1035,11 +1035,11 @@ const sr = /* @__PURE__ */ Xt(Zt, [["render", lr]]), ar = ["dusk"], or = { class
       l.value.sort == n ? l.value.sort = `-${n}` : l.value.sort = n, l.value.cursor = null, l.value.page = 1;
     }
     function G(n) {
-      const i = L("columns", n);
+      const i = V("columns", n);
       return !l.value.columns[i].hidden;
     }
     function oe(n) {
-      const i = L("columns", n), u = Be(r.value.columns[i]);
+      const i = V("columns", n), u = Be(r.value.columns[i]);
       return u.onSort = ae, u;
     }
     function me(n, i) {
@@ -1096,7 +1096,6 @@ const sr = /* @__PURE__ */ Xt(Zt, [["render", lr]]), ar = ["dusk"], or = { class
               onClick: Z
             }, () => [
               t(he) ? (a(), f("div", cr, [
-                V(" w "),
                 z(Jt, { "on-click": Z })
               ])) : k("", !0)
             ]),
@@ -1179,7 +1178,7 @@ const sr = /* @__PURE__ */ Xt(Zt, [["render", lr]]), ar = ["dusk"], or = { class
                             class: "text-sm py-4 px-6 text-gray-500 whitespace-nowrap"
                           }, [
                             y(n.$slots, `cell(${b.key})`, { item: u }, () => [
-                              V(v(me(u, b.key)), 1)
+                              M(v(me(u, b.key)), 1)
                             ])
                           ])), [
                             [R, G(b.key)]

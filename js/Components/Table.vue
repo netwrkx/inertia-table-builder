@@ -56,7 +56,6 @@
             v-if="canBeReset"
             class="order-5 sm:order-3 sm:me-4 ms-0"
           >
-w
             <TableReset :on-click="resetQuery" />
           </div>
         </slot>
