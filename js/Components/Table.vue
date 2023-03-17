@@ -56,6 +56,7 @@
             v-if="canBeReset"
             class="order-5 sm:order-3 sm:me-4 ms-0"
           >
+w
             <TableReset :on-click="resetQuery" />
           </div>
         </slot>
@@ -158,7 +159,7 @@
                         :name="`cell(${column.key})`"
                         :item="item"
                       >
-                        {{ item[column.key] }}
+                        {{ nestedIndex(item, column.key) }}
                       </slot>
                     </td>
                   </tr>
@@ -681,5 +682,16 @@ function header(key) {
     columnData.onSort = sortBy;
 
     return columnData;
+}
+
+function nestedIndex(item, key) {
+    try {
+		var keys = key.split(".");
+		if (keys.length == 1) return item[key].toString();
+		if (keys.length == 2) return item[keys[0]][keys[1]].toString();
+		if (keys.length == 3) return item[keys[0]][keys[1]][keys[2]].toString();
+		return "Unsupported Nested Index";
+	} catch (err) { }
+	return "N/A";
 }
 </script>
