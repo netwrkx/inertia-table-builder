@@ -1,7 +1,7 @@
 {
-    "name": "protonemedia/inertiajs-tables-laravel-query-builder",
+    "name": "netwrkx/inertia-table-builder",
     "description": "Inertia.js Front-end Components for Spatie's Laravel Query Builder",
-    "homepage": "https://github.com/protonemedia/inertiajs-tables-laravel-query-builder",
+    "homepage": "https://github.com/netwrkx/inertia-table-builder",
     "type": "library",
     "license": "MIT",
     "authors": [
@@ -11,8 +11,8 @@
         }
     ],
     "require": {
-        "php": "^8.1|^8.2",
-        "illuminate/support": "^9.37|^10.0"
+        "php": "^8.1|^8.2|^8.3",
+        "illuminate/support": "^9.37|^10.0|^11.0"
     },
     "require-dev": {
         "friendsofphp/php-cs-fixer": "^3.8",
